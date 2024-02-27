@@ -76,11 +76,23 @@ main{
         border: none;
         box-shadow: 0px 0px 3px $color-light-apricot;
         cursor: pointer;
-    
+        
         &:hover{
             filter: contrast(1.2);
             transform: scale(1.03);
             box-shadow: 0px 0px 7px 2px $color-light-apricot;
+        }
+        @media (hover: none) {
+            &:hover{
+                filter: none;
+                transform: none;
+                box-shadow: 0px 0px 3px $color-light-apricot;
+            }
+            &:active {
+                filter: contrast(1.2);
+                transform: scale(1.03);
+                box-shadow: 0px 0px 7px 2px $color-light-apricot;
+            }
         }
     }
 
