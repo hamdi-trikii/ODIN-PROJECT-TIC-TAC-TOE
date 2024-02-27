@@ -84,12 +84,21 @@ const Game = (() => {
   let playerO = Player("PlayerO", "O");
   let _round=0;
   let Display_Winner=document.querySelector(".winner")
+  let Display_player_turn=document.querySelector(".player_turn")
   const handleCellClick = (index) => {
     if (_round<9&&Gameboard.checkWinner()!=1&&Gameboard.checkWinner()!=-1 ){
       currentPlayer=_round%2==0?playerX:playerO;
+
+      
       if (Gameboard.makeMove(index, currentPlayer.symbol)) {
         updateBoardDisplay();
         _round++;
+        if(currentPlayer==playerX){
+          Display_player_turn.textContent="PlayerO's turn"
+        }
+        else{
+          Display_player_turn.textContent="PlayerX's turn"
+        }
         console.log(_round)
         if(Gameboard.checkWinner()!=0){
           console.log("game over!")
@@ -123,6 +132,7 @@ const Game = (() => {
     updateBoardDisplay()
     _round=0
     Display_Winner.textContent="May the Best Palyer Win ^^";
+    Display_player_turn.textContent="PlayerX's turn"
 
   })
   document.querySelector(".new_game").addEventListener('click',()=>NewGame())

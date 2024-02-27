@@ -1,0 +1,20 @@
+
+footer{
+
+    box-shadow: 0px -4px 8px black;
+
+    p{
+        
+        font-size: clamp(15px, 12px + 1.2vw, 46px);
+
+    }
+    .fa-github {
+        color: $color-light-apricot;
+
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .fa-github:hover {
+        transform: rotate(360deg) scale(1.2);
+      }
+}

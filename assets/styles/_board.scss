@@ -1,17 +1,89 @@
-
-.board {
-    background-color: red;
-    height: clamp(240px, 45vw, 1200px);
-    width: clamp(240px, 45vw, 1200px);
-    display: grid;
-    grid-template-columns: repeat(3, clamp(80px, 15vw, 400px));
-
-}
-
-.cell {
-    border: 10px solid black;
+main{
+    width: 100%;
+    background-color: $color-pine-green;
+    padding: calc(20px + 2vh) 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    flex-direction: column;
+    .player_turn{
+        height: 10vh;
+        font-family: 'Varela Round', sans-serif;
+        font-size: clamp(16px, 12px + 1.9vw, 48px);
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        
+    }
+    .board {
+        background-color:  $color-light-apricot;
+        height: clamp(240px, calc(140px + 20vw), 1200px);
+        width: clamp(240px, calc(140px + 20vw), 1200px);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:repeat(3, 1fr) ;
+        border: 6px solid $color-dark-greenish-blue;
+
+        .cell {
+            box-sizing: border-box;
+            border: 6px solid $color-dark-greenish-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Varela Round', sans-serif;
+            font-size: clamp(20px, 12px + 3vw, 80px);
+            cursor:pointer;
+            
+        }
+        
+    }
+    .winner {
+        position: relative;
+        background-color: $color-light-apricot;
+        padding: 16px 20px;
+        text-align: center;
+        width: calc(clamp(240px, calc(140px + 20vw), 1200px) + 40px);
+        margin-top: 25px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 2px solid transparent; 
+        font-family: 'Varela Round', sans-serif;
+        font-size: clamp(13px, 6px + 1.1vw, 38px);
+        font-weight: 600;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            left: 1px;
+            border-radius: 10px; /* Adjust this value to match the main element's border-radius */
+            border: 2px dashed $color-mahogany;
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 399px) {
+            width: calc(clamp(240px, calc(140px + 20vw), 1200px) + 20px);
+        }
+    }
+    .new_game{
+        margin-top: 25px;
+        background-color: $color-mahogany;
+        padding: 15px 25px;
+        border-radius: 8px;
+        color: white;
+        font-family: 'Varela Round', sans-serif;
+        font-size: clamp(13px, 6px + 1vw, 34px);
+        border: none;
+        box-shadow: 0px 0px 3px $color-light-apricot;
+        cursor: pointer;
+    
+        &:hover{
+            filter: contrast(1.2);
+            transform: scale(1.03);
+            box-shadow: 0px 0px 7px 2px $color-light-apricot;
+        }
+    }
+
+
 }
+

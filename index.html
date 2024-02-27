@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Tic Tac Toe</title>
+    <link rel="shortcut icon" href="assets/imgs/gamepad.svg">
     <link rel="stylesheet" href="assets/styles/main.css">
     <script src="assets/script.js" defer></script>
+    
 </head>
 <body>
+    <header>
+        
+           <p> Welcome To Tic Tac Toe Game</p>
+            <p>This Game Is A Part Of My Odin Project's Assignment</p>
+        
+    </header>
+    <main>
+        <div class="player_turn">PlayerX's turn</div>
+        <div class="board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        
+        <div class="winner">May the Best Palyer Win ^^</div>
 
-    <div class="board">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-    </div>
-    
-    <div class="winner">May the Best Palyer Win ^^</div>
-
-    <button class="new_game">New Game!</button>
-</body>
+        <button class="new_game">New Game!</button>
+    </main>
+    <footer class="footer">
+        <p>Copyright © 2024 Triki Hamdi <a href="https://github.com/hamdi-trikii" target="_blank"><i  class="fa-brands fa-github"></i> </a>  </p>
+        
+    </footer>
 </html>

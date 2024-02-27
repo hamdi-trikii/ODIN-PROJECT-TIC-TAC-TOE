@@ -1,1 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+$color-dark-greenish-blue: #283D3B;
+$color-pine-green: #197278;
+$color-light-apricot: #EDDDD4;
+$color-mahogany: #C44536;
+
+@import 'reset';
 @import 'board';
+@import 'header';
+@import 'footer';

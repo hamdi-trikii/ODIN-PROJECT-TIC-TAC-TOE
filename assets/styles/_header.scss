@@ -1,0 +1,20 @@
+header,footer{
+    background-color: $color-dark-greenish-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: calc(14px + 2.2vh) 0 ;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 4px 8px black;
+    p{
+        width: 100%;
+        font-size: clamp(18px, 14px + 1.9vw, 50px);
+        line-height: clamp(16px, 20px + 3.5vh, 80px);
+        text-align: center;
+        font-family: 'Varela Round', sans-serif;
+        color: $color-light-apricot;
+    
+    }
+}
