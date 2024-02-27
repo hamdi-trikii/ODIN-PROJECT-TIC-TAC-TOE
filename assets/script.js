@@ -123,7 +123,17 @@ const Game = (() => {
   });
   const updateBoardDisplay = () => {
     cells.forEach((cell, index) => {
-      cell.textContent = Gameboard.getBoard()[index];
+      let cellValue = Gameboard.getBoard()[index];
+
+      // Update the text content of the cell
+      cell.textContent = cellValue;
+
+      // Set the text color based on the cell value
+      if (cellValue === "X") {
+          cell.style.color = "red";
+      } else {
+          cell.style.color = "blue";
+      }
     });
   };
 
