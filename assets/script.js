@@ -104,13 +104,16 @@ const Game = (() => {
           console.log("game over!")
           if(Gameboard.checkWinner()==1){
             Display_Winner.textContent="PlayerX wins!"
+            Display_Winner.style.color = "#C44536";
           }
           else if(Gameboard.checkWinner()==-1){
             Display_Winner.textContent="PlayerO wins!"
+            Display_Winner.style.color = "#197278";
           }
         }
         else if (_round==9&&Gameboard.checkWinner()==0){
           Display_Winner.textContent="DRAW !"
+          Display_Winner.style.color = "#283D3B";
         }
         
       }
@@ -124,15 +127,11 @@ const Game = (() => {
   const updateBoardDisplay = () => {
     cells.forEach((cell, index) => {
       let cellValue = Gameboard.getBoard()[index];
-
-      // Update the text content of the cell
       cell.textContent = cellValue;
-
-      // Set the text color based on the cell value
       if (cellValue === "X") {
-          cell.style.color = "red";
+          cell.style.color = "#C44536";
       } else {
-          cell.style.color = "blue";
+          cell.style.color = "#197278";
       }
     });
   };
@@ -142,6 +141,7 @@ const Game = (() => {
     updateBoardDisplay()
     _round=0
     Display_Winner.textContent="May the Best Palyer Win ^^";
+    Display_Winner.style.color = "black";
     Display_player_turn.textContent="PlayerX's turn"
 
   })
@@ -149,10 +149,6 @@ const Game = (() => {
   return {updateBoardDisplay ,NewGame};
 
 })();
-
-
-
-
 
 Gameboard.resetBoard()
 Game.updateBoardDisplay()
